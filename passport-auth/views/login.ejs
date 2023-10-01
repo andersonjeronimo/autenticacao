@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+
+<body>
+    <h1>Login</h1>
+    <form action="/login" method="POST">
+        <input type="text" name="username" /><br />
+        <input type="password" name="password" /><br />
+        <input type="submit" value="login" />
+    </form>
+    <% if(message){%>
+        <p>
+           <label style="color: red;"><%= message%></label>
+        </p>
+    <% }%>
+    <p><a href="/users/forgot">Esqueceu a senha?</a></p>
+    <p><a href="/users/signup">Não possui cadastro?</a></p>
+
+</body>
+
+</html>
